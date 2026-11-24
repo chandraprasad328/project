@@ -1,0 +1,6 @@
+{
+  "name": "LEARNLOCAL",
+  "description": "Learning Without Limits. Intelligence Without Internet. Offline-first adaptive learning platform for Class 1 to Class 10.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

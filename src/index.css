@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.text-scale-lg {
+  font-size: 112.5%;
+}
+
+.text-scale-xl {
+  font-size: 125%;
+}
+
+.dyslexia-mode,
+.dyslexia-mode * {
+  font-family: 'Verdana', 'Arial', system-ui, sans-serif !important;
+  letter-spacing: 0.035em;
+  word-spacing: 0.1em;
+  line-height: 1.75;
+}
+
+.high-contrast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast header,
+.high-contrast main,
+.high-contrast aside,
+.high-contrast section,
+.high-contrast div[class*="bg-white"] {
+  border-color: #0f172a !important;
+}
+
+.high-contrast p,
+.high-contrast span,
+.high-contrast td,
+.high-contrast th,
+.high-contrast label {
+  color: #0f172a;
+}
+
+.high-contrast [class*="bg-gradient-to"] {
+  background: #0f172a !important;
+  color: #ffffff !important;
+}
+
+.high-contrast [class*="bg-gradient-to"] p,
+.high-contrast [class*="bg-gradient-to"] span,
+.high-contrast [class*="bg-gradient-to"] h1 {
+  color: #ffffff !important;
+}
+
+.lightweight-mode *,
+.lightweight-mode *::before,
+.lightweight-mode *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media print {
+  header,
+  aside,
+  button.no-print,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
